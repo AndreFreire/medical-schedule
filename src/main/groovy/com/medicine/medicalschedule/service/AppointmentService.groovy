@@ -23,7 +23,7 @@ class AppointmentService {
 
     Appointment getAppointmentById(String id) {
         appointmentRepository.findById(id)
-                .orElseThrow{ new NotFoundException("schedule not found") }
+                .orElseThrow{ new NotFoundException("appointment not found") }
     }
 
     void deleteAllAppointments(String id) {
